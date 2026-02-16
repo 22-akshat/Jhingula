@@ -1,0 +1,22 @@
+{
+  "name": "jhingula",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:api": "npm run dev --workspace=@jhingula/api",
+    "dev:web": "npm run dev --workspace=@jhingula/web",
+    "build": "npm run build --workspaces --if-present",
+    "postinstall": "prisma generate"
+  },
+  "devDependencies": {
+    "prisma": "^5.22.0",
+    "typescript": "^5.6.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0"
+  }
+}
